@@ -5,8 +5,8 @@ import "github.com/sirupsen/logrus"
 const (
 	defaultName            = "log"
 	defaultLevel           = logrus.TraceLevel
-	defaultUseJson         = true
-	defaultRootDir         = "."
+	defaultUseJson         = false
+	defaultRootDir         = ""
 	defaultOutputFile      = true
 	defaultFilePath        = "./log"
 	defaultOutPutLogstash  = false
@@ -38,7 +38,7 @@ func defaultOptions() *options {
 		RootDir:         defaultRootDir,
 		OutputFile:      defaultOutputFile,
 		FilePath:        defaultFilePath,
-		OutputLogstash:  defaultOutputFile,
+		OutputLogstash:  defaultOutPutLogstash,
 		LogstashAddr:    defaultLogstashAddr,
 		LogStashNetWork: defaultLogStashNetWork,
 	}
