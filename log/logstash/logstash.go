@@ -179,7 +179,7 @@ func (h *Hook) format(entry *logrus.Entry) string {
 		if h.rootDir != "" {
 			var dir string
 			dirs := strings.Split(entry.Caller.File, h.rootDir)
-			if len(dirs) > 0 {
+			if len(dirs) > 1 {
 				dir = dirs[1]
 			}
 			fields["@caller"] = fmt.Sprintf("%s:%s:%d", h.fileName, dir, entry.Caller.Line)
