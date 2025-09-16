@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shaoez/x/log/asynchook"
-	"github.com/shaoez/x/log/iohook"
-	"github.com/shaoez/x/log/logstash"
+	"x/log/asynchook"
+	"x/log/iohook"
+	"x/log/logstash"
 
 	rotatelogs "github.com/lestrrat/go-file-rotatelogs"
 	"github.com/sirupsen/logrus"
