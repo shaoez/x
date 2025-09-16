@@ -27,10 +27,10 @@ type IConfig interface {
 	ParseOptions() []Option
 }
 type Config struct {
-	Name    string       `json:"name"`
-	Level   logrus.Level `json:"level"`
-	UseJSON bool         `json:"json"`
-	RootDir string       `json:"rootdir"`
+	Name    string `json:"name"`
+	Level   int    `json:"level"`
+	UseJSON bool   `json:"json"`
+	RootDir string `json:"rootdir"`
 
 	// 必定会输出到console
 	OutputFile      bool   `json:"outfile"`
@@ -43,7 +43,7 @@ type Config struct {
 func (c *Config) ParseOptions() []Option {
 	var ops = []Option{
 		WithName(c.Name),
-		WithLevel(c.Level),
+		WithLevel(logrus.Level(c.Level)),
 		WithUseJSON(c.UseJSON),
 		WithRootDir(c.RootDir),
 		WithOutputFile(c.OutputFile),
