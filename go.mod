@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/bshuster-repo/logrus-logstash-hook v0.4.1
 	github.com/lestrrat/go-file-rotatelogs v0.0.0-20180223000712-d3151e2a480f
-	github.com/sirupsen/logrus v1.4.2
+	github.com/sirupsen/logrus v1.6.0
 	golang.org/x/net v0.0.0-20180906233101-161cd47e91fd
 )
 
