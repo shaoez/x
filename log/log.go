@@ -2,6 +2,7 @@ package log
 
 import (
 	"github.com/sirupsen/logrus"
+	"os"
 	"time"
 )
 
@@ -85,6 +86,7 @@ func NewConfig(opts ...Option) *defaultConfig {
 
 // InitLogrus 根据配置初始化 logrus, 添加配置的 Hooks
 func InitLogrus(opts ...Option) (close func(), err error) {
+	logrus.SetOutput(os.Stdout)
 	if len(opts) > 0 {
 		globalConfig = NewConfig(opts...)
 	}
